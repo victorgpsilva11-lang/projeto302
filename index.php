@@ -8,9 +8,9 @@
 </head>
 <body>
     <h1>Minha To Do List</h1>
-    <form action = "add_task.php" method = "POST">
+    <form action = "teste.php" method= "POST">
         <input type = "text" name = "title" placeholder = "Nova Tarefa..." required>
-        <button lype = "submit">Adicionar</buton>
+        <button lype = "submit">Adicionar</button>
 </form>
 <hr>
 
@@ -24,8 +24,8 @@
         echo "<li>";
         echo $row['status'] == 'concluida' ? "<s>{$row['title']}</s>" : $row['title'];
         echo "
-            <a href= 'update_task.php?id={$row['id']}'>iconv_get_encoding</a>
-            <a href= 'update_task.php?id={$row['id']}'>iconv_strlen</a>";
+            <a href= 'update_task.php?id={$row['id']}'>📝</a>
+            <a href= 'delete_task.php?id={$row['id']}'>🗑️</a>";
         echo "</li>";
         }
     } else {
